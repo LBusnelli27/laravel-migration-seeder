@@ -3,12 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Train;
-
 use Illuminate\Http\Request;
 
-class PageController extends Controller
+class TrainController extends Controller
 {
-    public function index() {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
         $trains = Train::all();
 
         $data = [
